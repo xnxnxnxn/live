@@ -1,0 +1,30 @@
+<nz-content class="xn-content">
+<!--  center: 初始化后中心点-->
+<!--  zoom：缩放级别-->
+  <ngx-amap class="demo-map"
+      (naReady)="onMapReady($event)"
+      [center]="[121.649045,29.781985]"
+      [zoom]="14"
+      (naClick)="onMapEvent($event)"
+  >
+    <amap-tool-bar></amap-tool-bar>
+
+<!--    <amap-marker-clusterer [gridSize]="80" >-->
+<!--      <amap-marker *ngFor="let marker of markerList;let i = index"-->
+<!--                   [inCluster]="true"-->
+
+<!--                   [position]="marker"-->
+<!--                   [offset]="{x:-15, y:-15}">-->
+<!--        <amap-info-window [offset]="infoWindowOffset">-->
+<!--          我是第 {{i+1}} 个marker-->
+<!--        </amap-info-window>-->
+<!--      </amap-marker>-->
+<!--    </amap-marker-clusterer>-->
+
+    <amap-marker *ngFor="let marker of markerList;let i = index"
+                 [position]="marker"
+                 [offset]="{x:-15, y:-15}">
+    </amap-marker>
+  </ngx-amap>
+</nz-content>
+
