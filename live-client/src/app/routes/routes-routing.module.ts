@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { SimpleGuard } from '@delon/auth';
 import { environment } from '@env/environment';
 // layout
 import { LayoutDefaultComponent } from '../layout/default/default.component';
 import { LayoutFullScreenComponent } from '../layout/fullscreen/fullscreen.component';
 import { LayoutPassportComponent } from '../layout/passport/passport.component';
-// dashboard pages
-import { DashboardComponent } from './dashboard/dashboard.component';
-// passport pages
-import { UserLoginComponent } from './passport/login/login.component';
-import { UserRegisterComponent } from './passport/register/register.component';
-import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
+// dashboard pages
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {LiveComponent} from './live/live.component';
+import {MapComponent} from './map/map.component';
 import { UserLockComponent } from './passport/lock/lock.component';
-import {MapComponent} from "./map/map.component";
-import {LiveComponent} from "./live/live.component";
+// passport pages
+import { UserLoginComponent } from './passport/login/login.component';
+import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
+import { UserRegisterComponent } from './passport/register/register.component';
 
 const routes: Routes = [
   {

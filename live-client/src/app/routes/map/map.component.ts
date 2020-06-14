@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AmapPluginLoaderService} from "ngx-amap";
+import {AmapPluginLoaderService} from 'ngx-amap';
 // @ts-ignore
 import Geocoder = AMap.Geocoder;
 
@@ -15,12 +15,12 @@ export class MapComponent implements OnInit {
   amap: AMap.Map;
 
   markerList = [
-    [121.656983,29.780695],
-    [121.641172,29.76966]
-  ]
+    [121.656983, 29.780695],
+    [121.641172, 29.76966]
+  ];
 
   // @ts-ignore
-  geocoder:AMap.Geocoder;
+  geocoder: AMap.Geocoder;
 
   infoWindowOffset = {
     x: 0,
@@ -36,7 +36,7 @@ export class MapComponent implements OnInit {
     this.plugin.load('AMap.Geocoder').subscribe(() => {
       // @ts-ignore
       this.geocoder = new AMap.Geocoder({
-        extensions:'all'
+        extensions: 'all'
       });
     });
 
@@ -63,25 +63,25 @@ export class MapComponent implements OnInit {
       const marker = [event.lnglat.lng, event.lnglat.lat];
       this.markerList.push(marker);
       // 坐标 -----》 地址
-      this.geocoder.getAddress(marker,(status: Geocoder.SearchStatus, result: Geocoder.BatchReGeocodeResult | string) => {
+      this.geocoder.getAddress(marker, (status: Geocoder.SearchStatus, result: Geocoder.BatchReGeocodeResult | string) => {
         if (status === 'complete' && result.regeocode) {
           const address = result.regeocode.formattedAddress;
           console.log(result);
         }else{
-          console.log('解析坐标失败')
+          console.log('解析坐标失败');
         }
       });
 
       // 地址 -----》  坐标
-      this.geocoder.getLocation("浙江省宁波市鄞州区东钱湖陶公岛",(status: Geocoder.SearchStatus, result: Geocoder.GeocodeResult | string) => {
-        if (status === 'complete' &&result.geocodes.length) {
+      this.geocoder.getLocation('浙江省宁波市鄞州区东钱湖陶公岛', (status: Geocoder.SearchStatus, result: Geocoder.GeocodeResult | string) => {
+        if (status === 'complete' && result.geocodes.length) {
           // const address = result.regeocode.formattedAddress;
           console.log(result);
         }else{
           console.log(result);
-          console.log('解析地址失败')
+          console.log('解析地址失败');
         }
-      })
+      });
     }
   }
 
