@@ -7,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LiveComponent implements OnInit {
-
+  number = 8;
+  numberStr = this.number.toString().split("");
   constructor() { }
 
   ngOnInit(): void {
+    // setInterval(() => {
+    //   this.number += 1;
+    // },1000);
+  }
+
+  change() {
+    this.number ++;
+    // this.number += 478;
+    // this.numberStr = this.number.toString().split("");
+  }
+
+  change2() {
+    this.number --;
   }
 
 }

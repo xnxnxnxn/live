@@ -9,6 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { SHARED_DELON_MODULES } from './shared-delon.module';
 import { SHARED_ZORRO_MODULES } from './shared-zorro.module';
+import { NumberScrollComponent } from './components/number-scroll/number-scroll.component';
+import { NumberScroll2Component } from './components/number-scroll2/number-scroll2.component';
+import { HtmlPipe } from './pipe/html.pipe';
 
 // #region third libs
 
@@ -40,7 +43,10 @@ const DIRECTIVES = [];
   declarations: [
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
+    NumberScrollComponent,
+    NumberScroll2Component,
+    HtmlPipe
   ],
   exports: [
     CommonModule,
@@ -57,7 +63,9 @@ const DIRECTIVES = [];
     ...THIRDMODULES,
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
+    NumberScrollComponent,
+    NumberScroll2Component
   ]
 })
 export class SharedModule { }

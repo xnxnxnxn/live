@@ -1,0 +1,27 @@
+{{number}}
+
+<div>
+  ------------------------------------------------
+</div>
+
+<div class="mt-number-animate">
+  <ng-container *ngFor="let scrollNumber of numberList;let i = index">
+    <div
+      class="mt-number-animate-dom"
+      [@dataUpdate] ='scrollNumber.number'
+    >
+      <span class="mt-number-animate-span">0</span>
+      <span class="mt-number-animate-span">1</span>
+      <span class="mt-number-animate-span">2</span>
+      <span class="mt-number-animate-span">3</span>
+      <span class="mt-number-animate-span">4</span>
+      <span class="mt-number-animate-span">5</span>
+      <span class="mt-number-animate-span">6</span>
+      <span class="mt-number-animate-span">7</span>
+      <span class="mt-number-animate-span">8</span>
+      <span class="mt-number-animate-span">9</span>
+      <span class="mt-number-animate-span">0</span>
+      <span class="mt-number-animate-span">.</span>
+    </div>
+  </ng-container>
+</div>
