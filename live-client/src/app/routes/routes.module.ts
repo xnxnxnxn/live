@@ -15,6 +15,7 @@ import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 import { UserRegisterComponent } from './passport/register/register.component';
 import { RouteRoutingModule } from './routes-routing.module';
+import { FileComponent } from './file/file.component';
 
 
 const COMPONENTS = [
@@ -43,7 +44,8 @@ const COMPONENTS_NOROUNT = [];
     ...COMPONENTS,
     ...COMPONENTS_NOROUNT,
     MapComponent,
-    LiveComponent
+    LiveComponent,
+    FileComponent
   ],
 })
 export class RoutesModule {}

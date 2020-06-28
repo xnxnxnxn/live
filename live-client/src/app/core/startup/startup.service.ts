@@ -125,6 +125,11 @@ export class StartupService {
             link: '/map',
           },
           {
+            text: '分片上传',
+            icon: { type: 'icon', value: 'rocket' },
+            link: '/file',
+          },
+          {
             text: '视频',
             icon: { type: 'icon', value: 'rocket' },
             link: '/live',

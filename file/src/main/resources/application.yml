@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: file
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+server:
+#  servlet:
+#    context-path: /file
+  port: 9003
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+file:
+  path: E:\xn_project_file\live\
+  domain: http://127.0.0.1:9003/f/

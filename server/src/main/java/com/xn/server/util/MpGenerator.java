@@ -79,7 +79,7 @@ public class MpGenerator {
         strategy.setTablePrefix("mst_", "tbl_");
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setInclude(
-                "mst_user"
+                "tbl_file"
         );
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         // 自定义实体父类

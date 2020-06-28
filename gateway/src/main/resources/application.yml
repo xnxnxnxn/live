@@ -20,6 +20,14 @@ spring:
           filters:
             - StripPrefix=1
 
+        - id: file
+          uri: lb://file
+          predicates:
+            - Path= /file/**
+            #         在转发之前将/system去掉
+          filters:
+            - StripPrefix=1
+
 server:
   port: 9090
 
@@ -27,6 +35,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+
+
+
+
 
 
 

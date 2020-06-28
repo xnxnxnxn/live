@@ -17,6 +17,7 @@ import { UserLockComponent } from './passport/lock/lock.component';
 import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 import { UserRegisterComponent } from './passport/register/register.component';
+import {FileComponent} from "./file/file.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
       { path: 'map', component: MapComponent, data: { title: '地图' } },
+      { path: 'file', component: FileComponent, data: { title: '分片上传' } },
       { path: 'live', component: LiveComponent, data: { title: '视频' } },
       { path: 'exception', loadChildren: () => import('./exception/exception.module').then(m => m.ExceptionModule) },
       // 业务子模块

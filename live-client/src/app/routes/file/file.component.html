@@ -1,0 +1,11 @@
+<p>file works!</p>
+
+<nz-upload [nzBeforeUpload]="beforeUpload" [nzAction]="uploadUrl" [nzCustomRequest]="customUpload">
+  <button  nz-button><i nz-icon nzType="upload"></i><span>Click to Upload</span></button>
+</nz-upload>
+
+<!--<img [src]="filePath"/>-->
+
+<video width="320" height="240" controls *ngIf="filePath">
+  <source [src]="filePath" type="video/mp4">
+</video>
